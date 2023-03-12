@@ -1,46 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400&family=Sacramento&display=swap');
+
 body {
     margin: 0;
-    background-color: lightpink;
+    background-color: lavenderblush;
 }
 
 nav {
-    height: 3rem;
+    --navbar-height: 3rem;
+    height: var(--navbar-height);
+    margin-bottom: 1rem;
 }
 
 h1 {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: 'Sacramento', cursive;
     font-weight: 300;
-    height: inherit;
+    font-size: var(--navbar-height);
     text-align: center;
+    margin: 0;
 }
 
 a {
-    font-family: 'Montserrat', sans-serif;
-    margin: .5rem auto;
     text-decoration: none;
 }
 
-a:hover {
-    color: purple;
-}
-
-.preview {
-    width: inherit;
+.web-preview {
+    width: 25rem;
     border-radius: .7rem;
     border: .1px solid gray;
+    transition-duration: 500ms;
+    transform: scale(.95);
 }
 
-.projects {
+.web-preview:is(:hover, :focus) {
+    transform: scale(1);
+}
+
+.web-name {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    text-align: center;
+}
+
+.web-name:is(:hover, :focus) {
+    color: salmon;
+}
+
+.project-demo {
     display: flex;
     justify-content: space-around;
-    border-radius: .7rem;
-    margin: 0 .5rem;
-}
-
-.project {
-    margin: 1rem;
-    border-radius: .7rem;
-    width: 25rem;
-    display: flex;
-    flex-direction: column;
 }

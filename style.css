@@ -1,3 +1,46 @@
 body {
-    background-color: lavender;
+    margin: 0;
+    background-color: lightpink;
+}
+
+nav {
+    height: 3rem;
+}
+
+h1 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 300;
+    height: inherit;
+    text-align: center;
+}
+
+a {
+    font-family: 'Montserrat', sans-serif;
+    margin: .5rem auto;
+    text-decoration: none;
+}
+
+a:hover {
+    color: purple;
+}
+
+.preview {
+    width: inherit;
+    border-radius: .7rem;
+    border: .1px solid gray;
+}
+
+.projects {
+    display: flex;
+    justify-content: space-around;
+    border-radius: .7rem;
+    margin: 0 .5rem;
+}
+
+.project {
+    margin: 1rem;
+    border-radius: .7rem;
+    width: 25rem;
+    display: flex;
+    flex-direction: column;
 }

@@ -1,51 +1,80 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400&family=Sacramento&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400&family=Roboto:wght@400&family=Sacramento&display=swap");
 
 body {
-    margin: 0;
-    background-color: lavenderblush;
-}
-
-nav {
-    --navbar-height: 3rem;
-    height: var(--navbar-height);
-    margin-bottom: 1rem;
+	margin: 0;
+	background-color: rgb(245, 245, 245);
 }
 
 h1 {
-    font-family: 'Sacramento', cursive;
-    font-weight: 300;
-    font-size: var(--navbar-height);
-    text-align: center;
-    margin: 0;
+	font-family: "Sacramento", cursive;
+	font-weight: 300;
+	place-content: center;
+	text-align: center;
+	font-size: 3rem;
+	margin: 0 0 1rem 0;
+	background: rgb(255, 240, 245);
 }
 
 a {
-    text-decoration: none;
+	text-decoration: none;
 }
 
 .web-preview {
-    width: 25rem;
-    border-radius: .7rem;
-    border: .1px solid gray;
-    transition-duration: 500ms;
-    transform: scale(.95);
+	width: 25rem;
+	border-radius: 0.7rem;
 }
 
 .web-preview:is(:hover, :focus) {
-    transform: scale(1);
+	outline: 2px solid rgb(250, 128, 114);
+	opacity: 1;
 }
 
 .web-name {
-    font-family: 'Montserrat', sans-serif;
-    margin: 0;
-    text-align: center;
+	font-family: "Montserrat", sans-serif;
+	font-weight: 400;
+	color: rgb(50, 50, 50);
+	margin: 0 0 0.7rem;
+	text-align: center;
+	font-size: 1.5rem;
 }
 
 .web-name:is(:hover, :focus) {
-    color: salmon;
+	text-decoration: underline;
 }
 
 .project-demo {
-    display: flex;
-    justify-content: space-around;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+}
+
+.web-description {
+	flex: 40%;
+	font-size: 1rem;
+	font-family: "Roboto", sans-serif;
+	background-color: white;
+	border-radius: 0.5rem;
+	padding: 0 1rem 1rem;
+	margin: 0 2rem;
+	justify-content: space-between;
+	line-height: 1.5rem;
+	color: gray;
+}
+
+.button-group {
+	display: inline-flex;
+	gap: 1rem;
+}
+
+.tile {
+	border-radius: 1rem;
+	height: 2rem;
+	padding: 0 0.5rem;
+	background-color: transparent;
+	border: 1px solid rgb(170, 170, 170);
+}
+
+.tile:is(:hover, :focus) {
+	transition-duration: 300ms;
+	background-color: lavender;
 }

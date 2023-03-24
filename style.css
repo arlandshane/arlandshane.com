@@ -1,8 +1,10 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400&family=Roboto:wght@400&family=Sacramento&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400&family=Roboto:wght@300;400&family=Sacramento&display=swap");
 
 body {
+	--accent-color: cornflowerblue;
+
 	margin: 0;
-	background-color: rgb(245, 245, 245);
+	background-color: whitesmoke;
 }
 
 h1 {
@@ -11,8 +13,13 @@ h1 {
 	place-content: center;
 	text-align: center;
 	font-size: 3rem;
-	margin: 0 0 1rem 0;
-	background: rgb(255, 240, 245);
+	margin: 0;
+	background-color: ghostwhite;
+}
+
+.project-links {
+	text-align: center;
+	padding: 1rem 0;
 }
 
 a {
@@ -22,18 +29,18 @@ a {
 .web-preview {
 	width: 25rem;
 	border-radius: 0.7rem;
+	outline: 1px solid gray;
 }
 
 .web-preview:is(:hover, :focus) {
-	outline: 2px solid rgb(250, 128, 114);
+	outline: 2px solid var(--accent-color);
 	opacity: 1;
 }
 
 .web-name {
-	font-family: "Montserrat", sans-serif;
 	font-weight: 400;
 	color: rgb(50, 50, 50);
-	margin: 0 0 0.7rem;
+	margin: 0;
 	text-align: center;
 	font-size: 1.5rem;
 }
@@ -44,21 +51,35 @@ a {
 
 .project-demo {
 	display: flex;
-	flex-wrap: wrap;
 	justify-content: space-around;
 }
 
+.project-container {
+	display: flex;
+	flex-direction: column;
+	flex: 1;
+	outline: 1px solid gainsboro;
+	border-radius: 1rem;
+	margin: 1rem;
+}
+
 .web-description {
-	flex: 40%;
-	font-size: 1rem;
 	font-family: "Roboto", sans-serif;
-	background-color: white;
-	border-radius: 0.5rem;
-	padding: 0 1rem 1rem;
-	margin: 0 2rem;
-	justify-content: space-between;
+	display: flex;
+	flex-direction: column;
+	flex: auto;
+	padding: 1rem;
+	margin: 1rem;
 	line-height: 1.5rem;
 	color: gray;
+	border-radius: 0.5rem;
+	background-color: white;
+}
+
+.description {
+	flex: auto;
+	padding: 0;
+	margin: 0 0 1rem;
 }
 
 .button-group {
@@ -76,5 +97,53 @@ a {
 
 .tile:is(:hover, :focus) {
 	transition-duration: 300ms;
-	background-color: lavender;
+	background-color: var(--accent-color);
+}
+
+.about-dev {
+	margin: auto auto 1rem;
+	padding: 1rem;
+	width: 30rem;
+	outline: 1px solid gainsboro;
+	border-radius: 1rem;
+	text-align: center;
+}
+
+.dev-image {
+	width: 10rem;
+	border-radius: 100%;
+	aspect-ratio: 1 / 1;
+	object-fit: cover;
+	object-position: top;
+}
+
+.montserrat {
+	font-family: "Montserrat", sans-serif;
+}
+
+.about-text {
+	font-family: "Roboto", sans-serif;
+	font-weight: 300;
+}
+
+.my-links {
+	font-family: "Roboto", sans-serif;
+	font-weight: 300;
+	font-size: small;
+}
+
+.fa-brands {
+	animation: anime ease 2.5s infinite;
+}
+
+@keyframes anime {
+	0% {
+		color: black;
+	}
+	50% {
+		color: var(--accent-color);
+	}
+	100% {
+		color: black;
+	}
 }

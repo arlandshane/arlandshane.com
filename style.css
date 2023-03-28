@@ -2,6 +2,7 @@
 
 body {
 	--accent-color: cornflowerblue;
+	--description-color: gray;
 
 	margin: 0;
 	background-color: whitesmoke;
@@ -38,11 +39,14 @@ a {
 }
 
 .web-name {
-	font-weight: 400;
-	color: rgb(50, 50, 50);
-	margin: 0;
 	text-align: center;
+}
+
+.heading {
 	font-size: 1.5rem;
+	font-weight: 400;
+	margin: 0;
+	color: rgb(50, 50, 50);
 }
 
 .web-name:is(:hover, :focus) {
@@ -51,6 +55,7 @@ a {
 
 .project-demo {
 	display: flex;
+	flex-wrap: wrap;
 	justify-content: space-around;
 }
 
@@ -71,7 +76,7 @@ a {
 	padding: 1rem;
 	margin: 1rem;
 	line-height: 1.5rem;
-	color: gray;
+	color: var(--description-color);
 	border-radius: 0.5rem;
 	background-color: white;
 }
